@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <title>My flexbox page</title>
+    <style>
+        body{
+            padding: 2em;
+        }
+        .header-container{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footer-container{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .main-container{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .main-content-item{
+            text-align: left;
+            background: deepskyblue;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .side-bar-left-item{
+            background: gold;
+        }
+        .side-bar-right-item{
+            background: hotpink;
+        }
+        .side-bar-item{
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+        .main-content-item{
+            flex: 3 0px;
+        }
+        .side-bar-left-item{
+            order: 1;
+        }
+        .main-content-item{
+            order: 2;
+        }
+        .side-bar-right-item{
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">Sample Flexbox example</header>
+    <div class="main-container">
+        <section class="main-content-item">
+            <article>
+                <h2>First Article </h2>
+                <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).</p>
+            </article>
+            <article>
+                <h2>Second Article </h2>
+                <p>Representing tabular data on a webpage in an understandable, accessible way can be a challenge. This module covers basic table markup, along with more complex features such as implementing captions and summaries.</p>
+            </article>
+            <article>
+                <h2>Third Article </h2>
+                <p>Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.</p>
+            </article>
+        </section>
+        <sidebar class="side-bar-item side-bar-left-item">Left Side Bar</sidebar>
+        <sidebar class="side-bar-item side-bar-right-item">Right Side Bar</sidebar>
+    </div>
+    <footer class="footer-container">Footer</footer>
+
+</body>
+</html>
